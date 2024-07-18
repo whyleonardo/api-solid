@@ -4,9 +4,13 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir build",
-    "start": "node build/server.js"
+    "start": "node build/server.js",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma db studio"
   },
   "dependencies": {
+    "@prisma/client": "5.17.0",
     "fastify": "4.28.1"
   },
   "devDependencies": {
