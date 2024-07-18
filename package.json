@@ -2,7 +2,12 @@
   "name": "api-solid",
   "type": "module",
   "scripts": {
-    "dev": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src --out-dir build",
+    "start": "node build/server.js"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.11",
