@@ -7,7 +7,8 @@
     "start": "node build/server.js",
     "db:push": "prisma db push",
     "db:generate": "prisma generate",
-    "db:studio": "prisma db studio"
+    "db:studio": "prisma studio",
+    "db:dev": "prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "5.17.0",
@@ -17,6 +18,7 @@
     "@biomejs/biome": "1.8.3",
     "@types/node": "20.14.11",
     "dotenv": "16.4.5",
+    "prisma": "5.17.0",
     "tsup": "8.1.2",
     "tsx": "4.16.2",
     "typescript": "5.5.3",

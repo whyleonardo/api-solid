@@ -24,6 +24,9 @@ importers:
       dotenv:
         specifier: 16.4.5
         version: 16.4.5
+      prisma:
+        specifier: 5.17.0
+        version: 5.17.0
       tsup:
         specifier: 8.1.2
         version: 8.1.2(tsx@4.16.2)(typescript@5.5.3)
@@ -1417,11 +1420,9 @@ snapshots:
     optionalDependencies:
       prisma: 5.17.0
 
-  '@prisma/debug@5.17.0':
-    optional: true
+  '@prisma/debug@5.17.0': {}
 
-  '@prisma/engines-version@5.17.0-31.393aa359c9ad4a4bb28630fb5613f9c281cde053':
-    optional: true
+  '@prisma/engines-version@5.17.0-31.393aa359c9ad4a4bb28630fb5613f9c281cde053': {}
 
   '@prisma/engines@5.17.0':
     dependencies:
@@ -1429,19 +1430,16 @@ snapshots:
       '@prisma/engines-version': 5.17.0-31.393aa359c9ad4a4bb28630fb5613f9c281cde053
       '@prisma/fetch-engine': 5.17.0
       '@prisma/get-platform': 5.17.0
-    optional: true
 
   '@prisma/fetch-engine@5.17.0':
     dependencies:
       '@prisma/debug': 5.17.0
       '@prisma/engines-version': 5.17.0-31.393aa359c9ad4a4bb28630fb5613f9c281cde053
       '@prisma/get-platform': 5.17.0
-    optional: true
 
   '@prisma/get-platform@5.17.0':
     dependencies:
       '@prisma/debug': 5.17.0
-    optional: true
 
   '@rollup/rollup-android-arm-eabi@4.18.1':
     optional: true
@@ -1930,7 +1928,6 @@ snapshots:
   prisma@5.17.0:
     dependencies:
       '@prisma/engines': 5.17.0
-    optional: true
 
   process-warning@3.0.0: {}
 
