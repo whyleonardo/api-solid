@@ -1,0 +1,13 @@
+{
+  "name": "api-solid",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "tsup": "^8.1.2",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
