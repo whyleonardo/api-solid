@@ -8,7 +8,9 @@
     "db:push": "prisma db push",
     "db:generate": "prisma generate",
     "db:studio": "prisma studio",
-    "db:dev": "prisma migrate dev"
+    "db:dev": "prisma migrate dev",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@prisma/client": "5.17.0",
@@ -24,6 +26,8 @@
     "tsup": "8.1.2",
     "tsx": "4.16.2",
     "typescript": "5.5.3",
+    "vite-tsconfig-paths": "4.3.2",
+    "vitest": "2.0.3",
     "zod": "3.23.8"
   }
 }
