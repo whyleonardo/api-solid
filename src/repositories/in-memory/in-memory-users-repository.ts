@@ -23,7 +23,10 @@ export class InMemoryUsersRepository implements UsersRepository {
     };
 
     this.items.push(user);
-
     return user;
+  }
+
+  async resetTestingData() {
+    this.items = [];
   }
 }
