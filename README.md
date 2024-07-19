@@ -4,7 +4,7 @@ Gympass style app.
 
 ## Functional Requirement
 
-- [] It should be possible to sign-up an user;
+- [x] It should be possible to sign-up an user;
 - [] It should be possible to authenticate an user;
 - [] It should be possible to obtain logged user profile;
 - [] It should be possible to obtain the number of check-ins made by logged user;
@@ -16,7 +16,7 @@ Gympass style app.
 
 ## Business Rules
 
-- [] It shouldn't be possible to register with a duplicated email;
+- [x] It shouldn't be possible to register with a duplicated email;
 - [] It shouldn't be possible to make more than ONE check-in per day;
 - [] It shouldn't be possible for a user to make a check-in if they are not within 100 meters of the gym;
 - [] A check-in should only be valid within 20 minutes after it has been created;
@@ -25,7 +25,7 @@ Gympass style app.
 
 ## Nonfunctional Requirements
 
-- [] User passwords should be encrypted;
+- [x] User passwords should be encrypted;
 - [] The application data should be persisted inside a PostgreSQL database;
 - [] All data lists should be paginated with 20 items per page;
-- [] User should be identified by a JWT(JSON Web Token);
+- [] User should be identified by a JWT (JSON Web Token);

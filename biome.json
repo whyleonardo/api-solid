@@ -6,7 +6,7 @@
     "ignore": ["node_modules", "build"]
   },
   "files": {
-    "ignore": ["node_modules", "build"]
+    "ignore": ["node_modules", "build", "coverage"]
   },
   "javascript": {
     "formatter": {
