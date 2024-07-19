@@ -1,8 +1,9 @@
 {
-  "[prisma]": {
-    "editor.formatOnSave": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
-  }
+	"[prisma]": {
+		"editor.formatOnSave": true
+	},
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "always"
+	},
+	"editor.defaultFormatter": "biomejs.biome"
 }

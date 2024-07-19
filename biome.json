@@ -1,36 +1,36 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": {
-    "enabled": true,
-    "include": ["src/**/*.ts"],
-    "ignore": ["node_modules", "build"]
-  },
-  "files": {
-    "ignore": ["node_modules", "build", "coverage"]
-  },
-  "javascript": {
-    "formatter": {
-      "enabled": true,
-      "indentStyle": "space",
-      "indentWidth": 4,
-      "semicolons": "asNeeded",
-      "trailingCommas": "none",
-      "bracketSpacing": true,
-      "attributePosition": "multiline",
-      "bracketSameLine": false
-    }
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "correctness": {
-        "noUnusedImports": "error",
-        "noUnusedVariables": "error"
-      },
-      "nursery": {
-        "noUnusedFunctionParameters": "error"
-      }
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true,
+		"include": ["src/**/*.ts"],
+		"ignore": ["node_modules", "build"]
+	},
+	"files": {
+		"ignore": ["node_modules", "build", "coverage"]
+	},
+	"javascript": {
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "tab",
+			"indentWidth": 2,
+			"semicolons": "asNeeded",
+			"trailingCommas": "none",
+			"bracketSpacing": true,
+			"attributePosition": "multiline",
+			"bracketSameLine": false
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": "error",
+				"noUnusedVariables": "error"
+			},
+			"nursery": {
+				"noUnusedFunctionParameters": "error"
+			}
+		}
+	}
 }
