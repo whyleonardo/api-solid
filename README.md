@@ -12,7 +12,7 @@ Gympass style app.
 - [] It should be possible for user to search for nearby gyms;
 - [] It should be possible for user to search for gyms by name;
 - [x] It should be possible for user made check-in in a gym;
-- [] It should be possible to register a gym;
+- [x] It should be possible to register a gym;
 
 ## Business Rules
 
