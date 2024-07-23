@@ -4,61 +4,57 @@ import bcrypt from "bcryptjs"
 import { beforeEach, describe, expect, it } from "vitest"
 import { RegisterUserUseCase } from "./register-user"
 
-const usersRepository = new InMemoryUsersRepository()
+let usersRepository: InMemoryUsersRepository
+let sut: RegisterUserUseCase
 
 const EMAIL = "johndoe@test.com"
 const NAME = "John Doe"
 const PASSWORD = "123456"
 
 describe("Register User Use Case", () => {
-    beforeEach(async () => {
-        return await usersRepository.resetTestingData()
-    })
+	beforeEach(() => {
+		usersRepository = new InMemoryUsersRepository()
+		sut = new RegisterUserUseCase(usersRepository)
+	})
 
-    it("should be able to register", async () => {
-        const sut = new RegisterUserUseCase(usersRepository)
+	it("should be able to register", async () => {
+		const { user } = await sut.execute({
+			email: EMAIL,
+			name: NAME,
+			password: PASSWORD
+		})
 
-        const { user } = await sut.execute({
-            email: EMAIL,
-            name: NAME,
-            password: PASSWORD
-        })
+		expect(user.id).toEqual(expect.any(String))
+	})
 
-        expect(user.id).toEqual(expect.any(String))
-    })
+	it("should hash user password upon registration", async () => {
+		const { user } = await sut.execute({
+			email: EMAIL,
+			name: NAME,
+			password: PASSWORD
+		})
 
-    it("should hash user password upon registration", async () => {
-        const sut = new RegisterUserUseCase(usersRepository)
+		const isPasswordCorrectlyHashed = await bcrypt.compare(
+			PASSWORD,
+			user.password_hash
+		)
 
-        const { user } = await sut.execute({
-            email: EMAIL,
-            name: NAME,
-            password: PASSWORD
-        })
+		expect(isPasswordCorrectlyHashed).toBe(true)
+	})
 
-        const isPasswordCorrectlyHashed = await bcrypt.compare(
-            PASSWORD,
-            user.password_hash
-        )
+	it("shouldn't be able to register with same email twice", async () => {
+		await sut.execute({
+			email: EMAIL,
+			name: NAME,
+			password: PASSWORD
+		})
 
-        expect(isPasswordCorrectlyHashed).toBe(true)
-    })
-
-    it("shouldn't be able to register with same email twice", async () => {
-        const sut = new RegisterUserUseCase(usersRepository)
-
-        await sut.execute({
-            email: EMAIL,
-            name: NAME,
-            password: PASSWORD
-        })
-
-        await expect(async () => {
-            await sut.execute({
-                email: EMAIL,
-                name: NAME,
-                password: PASSWORD
-            })
-        }).rejects.toBeInstanceOf(UserAlreadyExistsError)
-    })
+		await expect(async () => {
+			await sut.execute({
+				email: EMAIL,
+				name: NAME,
+				password: PASSWORD
+			})
+		}).rejects.toBeInstanceOf(UserAlreadyExistsError)
+	})
 })
