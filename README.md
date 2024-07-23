@@ -11,14 +11,14 @@ Gympass style app.
 - [] It should be possible to user retrive their check-in history;
 - [] It should be possible for user to search for nearby gyms;
 - [] It should be possible for user to search for gyms by name;
-- [] It should be possible for user made check-in in a gym;
+- [x] It should be possible for user made check-in in a gym;
 - [] It should be possible to register a gym;
 
 ## Business Rules
 
 - [x] It shouldn't be possible to register with a duplicated email;
-- [] It shouldn't be possible to make more than ONE check-in per day;
-- [] It shouldn't be possible for a user to make a check-in if they are not within 100 meters of the gym;
+- [x] It shouldn't be possible to make more than ONE check-in per day;
+- [x] It shouldn't be possible for a user to make a check-in if they are not within 100 meters of the gym;
 - [] A check-in should only be valid within 20 minutes after it has been created;
 - [] A check-in should only be validated by administrators;
 - [] A gym should only be registered by administrators;
@@ -26,6 +26,6 @@ Gympass style app.
 ## Nonfunctional Requirements
 
 - [x] User passwords should be encrypted;
-- [] The application data should be persisted inside a PostgreSQL database;
+- [x] The application data should be persisted inside a PostgreSQL database;
 - [] All data lists should be paginated with 20 items per page;
 - [] User should be identified by a JWT (JSON Web Token);
