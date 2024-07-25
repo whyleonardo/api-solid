@@ -49,8 +49,6 @@ export class InMemoryGymsRepository implements GymsRepository {
 				}
 			)
 
-			console.log({ distance })
-
 			return distance < MAX_DISTANCE_IN_KM
 		})
 	}

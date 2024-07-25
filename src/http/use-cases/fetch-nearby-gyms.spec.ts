@@ -42,8 +42,6 @@ describe("Fetch Nearby Gyms Use Case", async () => {
 			userLongitude: USER_LONGITUDE
 		})
 
-		console.log(gyms)
-
 		expect(gyms).toHaveLength(1)
 		expect(gyms).toEqual([
 			expect.objectContaining({ description: "A gym for js devs (closer)" })
