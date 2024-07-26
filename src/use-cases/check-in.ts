@@ -1,8 +1,8 @@
-import { MaxDistanceError } from "@/http/errors/max-distance-error"
-import { MaxNumberOfCheckInsError } from "@/http/errors/max-number-of-check-ins-error"
-import { ResourceNotFoundError } from "@/http/errors/resource-not-found-error"
 import type { CheckInsRepository } from "@/repositories/check-ins-repository"
 import type { GymsRepository } from "@/repositories/gyms-repository"
+import { MaxDistanceError } from "@/use-cases/errors/max-distance-error"
+import { MaxNumberOfCheckInsError } from "@/use-cases/errors/max-number-of-check-ins-error"
+import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found-error"
 import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates"
 import type { CheckIn } from "@prisma/client"
 

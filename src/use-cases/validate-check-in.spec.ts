@@ -1,6 +1,6 @@
-import { LateCheckInValidationError } from "@/http/errors/late-check-in-validation-error"
-import { ResourceNotFoundError } from "@/http/errors/resource-not-found-error"
 import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository"
+import { LateCheckInValidationError } from "@/use-cases/errors/late-check-in-validation-error"
+import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found-error"
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import { ValidateCheckInUseCase } from "./validate-check-in"
 

@@ -1,5 +1,5 @@
-import { ResourceNotFoundError } from "@/http/errors/resource-not-found-error"
 import type { UsersRepository } from "@/repositories/users-repository"
+import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found-error"
 import type { User } from "@prisma/client"
 
 interface GetUserProfileUseCaseRequest {

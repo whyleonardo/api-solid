@@ -1,5 +1,5 @@
-import { InvalidCredentialsError } from "@/http/errors/invalid-credentials-error"
 import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository"
+import { InvalidCredentialsError } from "@/use-cases/errors/invalid-credentials-error"
 import bcrypt from "bcryptjs"
 import { beforeEach, describe, expect, it } from "vitest"
 import { AuthenticateUseCase } from "./authenticate"

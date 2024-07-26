@@ -1,6 +1,6 @@
-import { LateCheckInValidationError } from "@/http/errors/late-check-in-validation-error"
-import { ResourceNotFoundError } from "@/http/errors/resource-not-found-error"
 import type { CheckInsRepository } from "@/repositories/check-ins-repository"
+import { LateCheckInValidationError } from "@/use-cases/errors/late-check-in-validation-error"
+import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found-error"
 import type { CheckIn } from "@prisma/client"
 import dayjs from "dayjs"
 
