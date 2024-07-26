@@ -14,7 +14,7 @@ describe("Fetch Check-ins History (e2e)", () => {
 	})
 
 	it("should be able to list user check-ins history", async () => {
-		const { token } = await createAndAuthUser(app)
+		const { token } = await createAndAuthUser({ app })
 
 		const user = await prisma.user.findFirstOrThrow()
 
