@@ -1,5 +1,6 @@
 import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates"
 import { type Gym, Prisma } from "@prisma/client"
+import { randomUUID } from "node:crypto"
 import type { FindManyNearbyProps, GymsRepository } from "../gyms-repository"
 
 export class InMemoryGymsRepository implements GymsRepository {
@@ -7,7 +8,7 @@ export class InMemoryGymsRepository implements GymsRepository {
 
 	async create(data: Prisma.GymCreateInput) {
 		const gym = {
-			id: data.id ?? crypto.randomUUID(),
+			id: data.id ?? randomUUID(),
 			title: data.title,
 			description: data.description ?? null,
 			phone: data.phone ?? null,
