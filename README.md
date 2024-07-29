@@ -20,9 +20,9 @@ Gympass style app.
 - [x] It shouldn't be possible to register with a duplicated email;
 - [x] It shouldn't be possible to make more than ONE check-in per day;
 - [x] It shouldn't be possible for a user to make a check-in if they are not within 100 meters of the gym;
-- [] A check-in should only be valid within 20 minutes after it has been created;
-- [] A check-in should only be validated by administrators;
-- [] A gym should only be registered by administrators;
+- [x] A check-in should only be valid within 20 minutes after it has been created;
+- [x] A check-in should only be validated by administrators;
+- [x] A gym should only be registered by administrators;
 
 ## Nonfunctional Requirements
 
@@ -31,4 +31,4 @@ Gympass style app.
 - [x] The application data should be persisted inside a PostgreSQL database;
 - [x] All data lists should be paginated with 20 items per page;
 - [x] All data lists should be paginated with 20 items per page;
-- [] User should be identified by a JWT (JSON Web Token);
+- [x] User should be identified by a JWT (JSON Web Token);
